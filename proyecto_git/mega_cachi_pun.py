@@ -1,4 +1,6 @@
 print("Bienvenido al mega cachi-pun")
+nombre=input("Ingresa tu nombre -> ")
+print(f"{nombre}, jugaras contra la Terminal")
 
 roca_debilidades = [papel, spock]
 
@@ -33,3 +35,5 @@ def jugar(movimiento):
         return "VICTORIA: Envoltura"
     elif movimiento == "papel" and random.choice(lista_movimientos) in papel_debilidades:
         return "DERROTA: Papel roto"
+    
+
