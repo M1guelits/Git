@@ -35,3 +35,5 @@ def jugar(movimiento):
         return "VICTORIA: Envoltura"
     elif movimiento == "papel" and random.choice(lista_movimientos) in papel_debilidades:
         return "DERROTA: Papel roto"
+    
+
