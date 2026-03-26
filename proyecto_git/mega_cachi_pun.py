@@ -1,4 +1,6 @@
 print("Bienvenido al mega cachi-pun")
+nombre = input("Ingresa tu nombre")
+print(f"Ok {nombre}, jugaras contra la terminal de vscode! Las reglas son simples")
 
 roca_debilidades = [papel, spock]
 
