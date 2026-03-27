@@ -16,44 +16,45 @@ papel_debilidades = ["tijeras", "lagarto"]
 lista_movimientos = ["roca", "papel", "tijeras", "lagarto", "spock"]
 
 def jugar(movimiento):
-    if movimiento == "roca" and random.choice(lista_movimientos)=="roca":
+    movimiento_maquina = random.choice(lista_movimientos)
+    if movimiento == "roca" and movimiento_maquina=="roca":
         return "empate"
-    if movimiento == "roca" and random.choice(lista_movimientos) not in roca_debilidades:
+    if movimiento == "roca" and movimiento_maquina not in roca_debilidades:
         print("VICTORIA: Aplastante!" )
         return True
-    elif movimiento == "roca" and random.choice(lista_movimientos) in roca_debilidades:
+    if movimiento == "roca" and movimiento_maquina in roca_debilidades:
         print("DERROTA: Pierde roca")
         return False
-    if movimiento == "lagarto" and random.choice(lista_movimientos)=="lagarto":
+    if movimiento == "lagarto" and movimiento_maquina=="lagarto":
         return "empate"
-    if movimiento == "lagarto" and random.choice(lista_movimientos) not in lagarto_debilidades:
+    if movimiento == "lagarto" and movimiento_maquina not in lagarto_debilidades:
         print("VICTORIA: Ataque reptil")
         return True
-    elif movimiento == "lagarto" and random.choice(lista_movimientos) in roca_debilidades:
+    if movimiento == "lagarto" and movimiento_maquina in lagarto_debilidades:
         print("DERROTA: Masacrado a sangre fría")
         return False
-    if movimiento == "spock" and random.choice(lista_movimientos)=="spock":
+    if movimiento == "spock" and movimiento_maquina=="spock":
         return "empate"
-    if movimiento == "spock" and random.choice(lista_movimientos) not in spock_debilidades:
+    if movimiento == "spock" and movimiento_maquina not in spock_debilidades:
         print("VICTORIA: Dedos separados") 
         return True
-    elif movimiento == "spock" and random.choice(lista_movimientos) in spock_debilidades:
+    if movimiento == "spock" and movimiento_maquina in spock_debilidades:
         print("DERROTA: Devuelvete a Star-Trek")
         return False
-    if movimiento == "tijeras" and random.choice(lista_movimientos)=="tijeras":
+    if movimiento == "tijeras" and movimiento_maquina=="tijeras":
         return "empate"
-    if movimiento == "tijeras" and random.choice(lista_movimientos) not in tijeras_debilidades:
+    if movimiento == "tijeras" and movimiento_maquina not in tijeras_debilidades:
         print("VICTORIA: Tajadura") 
         return True
-    elif movimiento == "tijeras" and random.choice(lista_movimientos) in tijeras_debilidades:
+    if movimiento == "tijeras" and movimiento_maquina in tijeras_debilidades:
         print("DERROTA: Quebrantado") 
         return False
-    if movimiento == "papel" and random.choice(lista_movimientos)=="papel":
+    if movimiento == "papel" and movimiento_maquina=="papel":
         return "empate"
-    if movimiento == "papel" and random.choice(lista_movimientos) not in papel_debilidades:
+    if movimiento == "papel" and movimiento_maquina not in papel_debilidades:
         print("VICTORIA: Envoltura")
         return True
-    elif movimiento == "papel" and random.choice(lista_movimientos) in papel_debilidades:
+    if movimiento == "papel" and movimiento_maquina in papel_debilidades:
         print("DERROTA: Papel roto") 
         return False
 #bucle del juego (vicho)
@@ -63,9 +64,9 @@ while True:
     move=input("Elige entre roca, lagarto, spock, tijeras o papel -> ")
     if jugar(move)==True:
         puntaje_yo+=1
-    elif jugar(move)==False:
+    if jugar(move)==False:
         puntaje_terminal+=1
-    elif jugar(move)=="empate":
+    if jugar(move)=="empate":
         print("EMPATE")
     if puntaje_terminal==10:
         print("HA GANADO LA TERMINAL")
