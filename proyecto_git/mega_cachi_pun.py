@@ -16,24 +16,39 @@ lista_movimientos = [roca, papel, tijeras, lagarto, spock]
 
 def jugar(movimiento):
     if movimiento == "roca" and random.choice(lista_movimientos) not in roca_debilidades:
-        return "VICTORIA: Aplastante!"
+        print("VICTORIA: Aplastante!" )
+        return True
     elif movimiento == "roca" and random.choice(lista_movimientos) in roca_debilidades:
-        return "DERROTA: Pierde roca"
+        print("DERROTA: Pierde roca")
+        return False
+
     if movimiento == "lagarto" and random.choice(lista_movimientos) not in lagarto_debilidades:
-        return "VICTORIA: Ataque reptil"
+        print("VICTORIA: Ataque reptil")
+        return True
     elif movimiento == "lagarto" and random.choice(lista_movimientos) in roca_debilidades:
-        return "DERROTA: Masacrado a sangre fría"
+        print("DERROTA: Masacrado a sangre fría")
+        return False
+
     if movimiento == "spock" and random.choice(lista_movimientos) not in spock_debilidades:
-        return "VICTORIA: Dedos separados"
+        print("VICTORIA: Dedos separados") 
+        return True
     elif movimiento == "spock" and random.choice(lista_movimientos) in spock_debilidades:
-        return "DERROTA: Devuelvete a Star-Trek"
+        print("DERROTA: Devuelvete a Star-Trek")
+        return False
+
     if movimiento == "tijeras" and random.choice(lista_movimientos) not in tijeras_debilidades:
-        return "VICTORIA: Tajadura"
+        print("VICTORIA: Tajadura") 
+        return True
     elif movimiento == "tijeras" and random.choice(lista_movimientos) in tijeras_debilidades:
-        return "DERROTA: Quebrantado"
+        print("DERROTA: Quebrantado") 
+        return False
+
     if movimiento == "papel" and random.choice(lista_movimientos) not in papel_debilidades:
-        return "VICTORIA: Envoltura"
+        print("VICTORIA: Envoltura")
+        return True
     elif movimiento == "papel" and random.choice(lista_movimientos) in papel_debilidades:
-        return "DERROTA: Papel roto"
+        print("DERROTA: Papel roto") 
+        return False
+
     
 
