@@ -1,3 +1,4 @@
+import random
 print("Bienvenido al mega cachi-pun")
 nombre=input("Ingresa tu nombre -> ")
 print(f"{nombre}, jugaras contra la Terminal")
@@ -35,5 +36,35 @@ def jugar(movimiento):
         return "VICTORIA: Envoltura"
     elif movimiento == "papel" and random.choice(lista_movimientos) in papel_debilidades:
         return "DERROTA: Papel roto"
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#bucle del juego (vicho)
+puntaje_yo=0
+puntaje_terminal=0
+while True:
+    move=input("Elige entre roca, lagarrto, spock, tijeras o papel")
+    if jugar(move)==True:
+        puntaje_yo+=1
+    elif jugar(move)==False:
+        puntaje_terminal+=1
+    if puntaje_terminal==10:
+        print("HA GANADO LA TERMINAL")
+        break
+    if puntaje_yo==10:
+        print(f"HAS GANADO {nombre} FELICIDADES")
+        break
+    print(f"{nombre} {puntaje_yo} - TERMINAL {puntaje_terminal}")
+print("PUNTAJE FINAL")
+print(f"{nombre} {puntaje_yo} - TERMINAL {puntaje_terminal}")
