@@ -62,11 +62,15 @@ puntaje_yo=0
 puntaje_terminal=0
 while True:
     move=input("Elige entre roca, lagarto, spock, tijeras o papel -> ")
-    if jugar(move)==True:
+    if move not in lista_movimientos:
+        print("INSERTA UN MOVIMIENTO VALIDO")
+        continue
+    juego=jugar(move)
+    if juego==True:
         puntaje_yo+=1
-    if jugar(move)==False:
+    if juego==False:
         puntaje_terminal+=1
-    if jugar(move)=="empate":
+    if juego=="empate":
         print("EMPATE")
     if puntaje_terminal==10:
         print("HA GANADO LA TERMINAL")
