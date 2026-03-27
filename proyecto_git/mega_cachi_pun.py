@@ -1,6 +1,6 @@
 import random
 print("Bienvenido al mega cachi-pun")
-nombre = input("Ingresa tu nombre -> ")
+nombre = input("Ingresa tu nombre antes de jugar -> ")
 print(f"Ok {nombre}, jugaras contra la terminal de vscode! Las reglas son simples")
 
 roca_debilidades = ["papel", "spock"]
