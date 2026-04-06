@@ -81,3 +81,5 @@ while True:
     print(f"{nombre} {puntaje_yo} - TERMINAL {puntaje_terminal}")
 print("PUNTAJE FINAL")
 print(f"{nombre} {puntaje_yo} - TERMINAL {puntaje_terminal}")
+
+# Prueba de PR
